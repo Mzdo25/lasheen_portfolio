@@ -16,25 +16,25 @@
 
         /* 1. CSS Variables (for Light/Dark Mode) <-- COLORS UPDATED --> */
         :root {
-            --primary-color: #5682B1;    /* Medium Blue */
-            --secondary-color: #739EC9;   /* Lighter Blue */
-            --bg-color: #FFE8DB;         /* Light Peach */
-            --card-bg-color: #ffffff;    /* White cards */
-            --text-color: #000000;       /* Black text */
-            --text-muted: #333333;       /* Dark gray muted text */
-            --border-color: #FADACC;     /* Darker peach border */
+            --primary-color: #5682B1;    
+            --secondary-color: #739EC9;   
+            --bg-color: #ffffff;         /* Changed from #FFE8DB */
+            --card-bg-color: #f8f9fa;    /* Changed from #ffffff to contrast */
+            --text-color: #000000;       
+            --text-muted: #333333;       
+            --border-color: #e9ecef;     /* Changed from #FADACC */
             --shadow: 0 4px 12px rgba(0,0,0,0.05);
             --transition-speed: 0.3s ease;
         }
 
         [data-theme="dark"] {
-            --primary-color: #739EC9;    /* Lighter Blue */
-            --secondary-color: #a0c0e0;   /* Even Lighter Blue (for hover) */
-            --bg-color: #000000;         /* Black */
-            --card-bg-color: #1A1A1A;     /* Off-black cards */
-            --text-color: #FFE8DB;       /* Light Peach text */
-            --text-muted: #a0a0a0;       /* Light gray muted text */
-            --border-color: #2A2A2A;     /* Dark gray border */
+            --primary-color: #739EC9;    
+            --secondary-color: #a0c0e0;   
+            --bg-color: #000000;         
+            --card-bg-color: #1A1A1A;     
+            --text-color: #ffffff;       /* Changed from #FFE8DB */
+            --text-muted: #a0a0a0;       
+            --border-color: #2A2A2A;     
             --shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         /* ======================================================= */
@@ -374,7 +374,7 @@
         .skill-list li {
             padding: 8px 15px;
             background-color: var(--primary-color);
-            color: #fff; /* Text on badges should be white */
+            color: #fff; /* White text on badges */
             border-radius: 20px;
             font-size: 0.9rem;
             font-weight: 500;
