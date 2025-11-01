@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Lasheen - Portfolio</title>
+    <title>Mohamed Abdelgawad - Portfolio</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
@@ -90,10 +90,12 @@
             text-decoration: none;
         }
 
+        /* ==== UNDERLINE REMOVED FROM HERE ==== */
         a:hover {
             color: var(--secondary-color);
-            text-decoration: underline;
+            text-decoration: none; /* Was 'underline' */
         }
+        /* =================================== */
 
         ul {
             list-style: none;
@@ -127,16 +129,12 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            
-            /* ==== THIS IS THE NEW TRANSITION ==== */
             transition: transform 0.3s ease, background-color var(--transition-speed), border-color var(--transition-speed);
         }
 
-        /* ==== THIS IS THE NEW HIDING CLASS ==== */
         .header-hidden {
             transform: translateY(-100%);
         }
-        /* ==================================== */
 
         .header .container {
             display: flex;
@@ -212,6 +210,7 @@
             text-decoration: none; 
         }
 
+        /* This custom underline is NOT affected */
         .nav-menu a::after {
             content: '';
             position: absolute;
@@ -282,7 +281,7 @@
         .social-links a:hover {
             color: var(--primary-color);
             transform: scale(1.1);
-            text-decoration: none;
+            text-decoration: none; /* Kept just in case */
         }
 
         .contact-info {
@@ -1105,7 +1104,7 @@
             
 
             // --- Smooth Scroll Offset for Sticky Header ---
-            const header = document.querySelector('.header'); // Moved header selection up
+            const header = document.querySelector('.header'); 
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -1126,29 +1125,25 @@
                 });
             });
 
-            // ==== NEW: HIDE/SHOW HEADER ON SCROLL ====
+            // --- HIDE/SHOW HEADER ON SCROLL ---
             let lastScrollY = window.scrollY;
 
             window.addEventListener('scroll', () => {
                 const currentScrollY = window.scrollY;
-                const navMenu = document.getElementById('nav-menu'); // Get menu to check if open
+                const navMenu = document.getElementById('nav-menu'); 
 
-                // Don't hide header if mobile menu is open
                 if (navMenu.classList.contains('nav-open')) {
                     return;
                 }
 
                 if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                    // Scrolling Down & past the top
                     header.classList.add('header-hidden');
                 } else {
-                    // Scrolling Up
                     header.classList.remove('header-hidden');
                 }
 
                 lastScrollY = currentScrollY;
             });
-            // ==========================================
 
             // --- Scroll Animation Logic ---
             const animatedItems = document.querySelectorAll(
